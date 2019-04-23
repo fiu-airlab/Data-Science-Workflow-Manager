@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>DSWM project</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='flask_style.css') }}">
+
+<body>
+
+    <header class="w3-container w3-top w3-xlarge top-bar">
+        <button href="javascript:void(0)" class="w3-button side-button" onclick="openNav()">☰</button>
+        <div class="small-title">Senior Project</div>
+    </header>
+
+
+	<!-- Sidebar/menu -->
+	<nav class=" w3-top w3-large w3-padding sidenav" id="mySidenav"><br>
+		<div>
+			<button id="myclosebtn" class="close-button" onclick="closeNav()">&times;</button>
+		</div>
+        <div class="w3-container w3-margin-left w3-bar-item side-title">
+			<div style="color:#FEFFFF;font-size:35px"><b>DSWM v1.0</b></div>
+			<div style="color:#DEF2F1;font-size:20px"><b>Senior Project</b></div>
+		</div>
+		<div id="myList" class="w3-bar-block">
+			<a href="/" class="w3-bar-item w3-button w3-hover-white">Home</a>
+			<a href="/dashboard" class="w3-bar-item w3-button w3-hover-white">Dashboard</a>
+			<a href="/models" class="w3-bar-item w3-button w3-hover-white">Models</a>
+			<a href="/data" class="w3-bar-item w3-button w3-hover-white">Data</a>
+			<a href="/contact" class="w3-bar-item w3-button w3-hover-white">Contact</a>
+		</div>
+	</nav>
+
+	<div class="w3-main" id="main" style="margin-left:280px;margin-right:40px">
+
+		<!-- Header -->
+		<div class="w3-container title" id="showcase">
+			<h1 class="w3-jumbo"><b>Workflow Management System</b></h1>
+		</div>
+		<div class="w3-container my-container" id="productDescription">
+			<h1 class="w3-xxxlarge section-title"><b>Data Sources:</b>
+			<h2 class="w3-large section-title"><b>DB1B</b>
+			<p>Origin and Destination Survey (DB1B) is a DB1B has a 10% random sample of airline passenger 
+			tickets from reporting carriers. Data includes origin, destination and 
+			other itinerary details of passengers transported.<br>
+			<a href="https://www.transtats.bts.gov/Tables.asp?DB_ID=125&DB_Name=Airline%20Origin%20and%20Destination%20Survey%20%28DB1B%29&DB_Short_Name=Origin%20and%20Destination%20Survey">DB1B<br><br></a>
+			</p>
+			<h2 class="w3-large section-title"><b>T100:</b>
+			<p>he Air Carrier Statistics database, also known as the T-100 data bank, contains domestic and 
+			international airline market and segment data. Certificated U.S. air carriers report monthly air 
+			carrier traffic information using Form T-100. The data is collected by the Office of Airline Information, 
+			Bureau of Transportation Statistics.<br>
+			<a href="https://www.transtats.bts.gov/Tables.asp?DB_ID=111">T100<br><br></a>
+			</p>
+		</div>
+
+		<!-- End page content -->
+	</div>
+    <script type="text/javascript" src="{{ url_for('static', filename='sidenav.js') }}"></script>
+
+</body>
+
+</html>
