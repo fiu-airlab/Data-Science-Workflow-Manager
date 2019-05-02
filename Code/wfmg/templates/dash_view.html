@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	{%metas%}
+	<title>{%title%}</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	{%css%}
+</head>
+
+<body>
+
+    <header class="w3-container w3-top w3-xlarge top-bar">
+        <button href="javascript:void(0)" class="w3-button side-button" onclick="openNav()">☰</button>
+        <div class="small-title">Senior Project</div>
+    </header>
+
+
+	<!-- Sidebar/menu -->
+    <nav class=" w3-top w3-large w3-padding sidenav" id="mySidenav"><br>
+		<div>
+			<button id="myclosebtn" class="close-button" onclick="closeNav()">&times;</button>
+		</div>
+		<div class="w3-container w3-margin-left w3-bar-item side-title">
+			<div style="color:#FEFFFF;font-size:35px"><b>DSWM v1.0</b></div>
+			<div style="color:#DEF2F1;font-size:20px"><b>Senior Project</b></div>
+		</div>
+		<div id="myList" class="w3-bar-block">
+			<a href="/" class="w3-bar-item w3-button w3-hover-white">Home</a>
+			<a href="/dashboard" class="w3-bar-item w3-button w3-hover-white">Dashboard</a>
+			<a href="/models" class="w3-bar-item w3-button w3-hover-white">Models</a>
+			<a href="/data" class="w3-bar-item w3-button w3-hover-white">Data</a>
+			<a href="/contact" class="w3-bar-item w3-button w3-hover-white">Contact</a>
+		</div>
+	</nav>
+
+	<div class="w3-main" id="main" style="margin-left:10px;margin-right:10px;margin-top:60px">
+		{%app_entry%}
+	</div>
+	<footer>
+		{%config%}
+		{%scripts%}
+		{%renderer%}
+	</footer>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>DSWM project</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='flask_style.css') }}">
+
+<body>
+
+    <header class="w3-container w3-top w3-xlarge top-bar">
+        <button href="javascript:void(0)" class="w3-button side-button" onclick="openNav()">☰</button>
+        <div class="small-title">Senior Project</div>
+    </header>
+
+
+	<!-- Sidebar/menu -->
+	<nav class=" w3-top w3-large w3-padding sidenav" id="mySidenav"><br>
+		<div>
+			<button id="myclosebtn" class="close-button" onclick="closeNav()">&times;</button>
+		</div>
+        <div class="w3-container w3-margin-left w3-bar-item side-title">
+			<div style="color:#FEFFFF;font-size:35px"><b>DSWM v1.0</b></div>
+			<div style="color:#DEF2F1;font-size:20px"><b>Senior Project</b></div>
+		</div>
+		<div id="myList" class="w3-bar-block">
+			<a href="/" class="w3-bar-item w3-button w3-hover-white">Home</a>
+			<a href="/dashboard" class="w3-bar-item w3-button w3-hover-white">Dashboard</a>
+			<a href="/models" class="w3-bar-item w3-button w3-hover-white">Models</a>
+			<a href="/data" class="w3-bar-item w3-button w3-hover-white">Data</a>
+			<a href="/contact" class="w3-bar-item w3-button w3-hover-white">Contact</a>
+		</div>
+	</nav>
+
+	<div class="w3-main" id="main" style="margin-left:280px;margin-right:40px">
+
+		<!-- Header -->
+		<div class="w3-container title" id="showcase">
+			<h1 class="w3-jumbo"><b>Machine Learning Models:</b>
+		</div>
+		<div class="w3-container my-container" id="productDescription">
+			<p>In this project we are currently using 3 machine learning models as plugins in the Data Science pipeline.<br><br></p>
+			<h1 class="w3-xxxlarge section-title"><b>Autoregressive integrated moving average (ARIMA) </b></h1>	
+			<p>ARIMA is an acronym that stands for AutoRegressive Integrated Moving Average. It is a class of model that captures a 
+			suite of different standard temporal structures in time series data.<br><br>  
+			In statistics and econometrics, and in particular in time series analysis, an autoregressive integrated moving average 
+			model is a generalization of an autoregressive moving average model. Both of these models are fitted to time series data 
+			either to better understand the data or to predict future points in the series.<br><br>We used the python library statsmodels 
+			to create the ARIMA class used in the visualizations</p>		
+			<h1 class="w3-xxxlarge section-title"><b>Vector autoregression (VAR)</b></h1>	
+			<p>Vector autoregression (VAR) is a stochastic process model used to capture the linear interdependencies among multiple 
+			time series. VAR models generalize the univariate autoregressive model (AR model) by allowing for more than one evolving 
+			variable. We used the python library statsmodels to create the VAR class used in the visualizations and in the controller</p>	
+			<h1 class="w3-xxxlarge section-title"><b>Random Forest</b></h1>	
+			<p>Random Forest is a supervised learning algorithm. ... The general idea of the bagging method is that a combination of 
+			learning models increases the overall result. To say it in simple words: Random forest builds multiple decision trees and
+			merges them together to get a more accurate and stable prediction</p>	
+		</div>
+
+		<!-- End page content -->
+	</div>
+    <script type="text/javascript" src="{{ url_for('static', filename='sidenav.js') }}"></script>
+
+</body>
+
+</html>
